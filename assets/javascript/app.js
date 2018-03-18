@@ -8,29 +8,52 @@
 //.remove use to delete existing button, when delete button you inject the other elements that are needed
 //container, container, elements (for the second slide)
 //iterate over array, "for each questions " append an element to the DOM containing the questions and answers
-    for (let i = 0; i <= questionsArray.length; i++) {
-        var question = questionsArray[i].question
-        var someting = questionsArray[i].answers
-        $('#container').append(`<div>${question}</div>`)
+questionsArray = [{
+    question: "How are you?",
+    answers : ["fine","okay","good"],
+    rightAnswer: 1,
+},{   
+    question: "What's your favorite color?",
+    answers : ["blue","gray","green"],
+    rightAnswer: 2,
+},{
+    question: "What's your favorite animal?",
+    answers : ["goat","cow","llama"],
+    rightAnswer: 3,
+    
+},
+]
+//start button gets clicked, new page pops up with questions
+//write new div with 3 questions
+//timer starts
+//function to count timer down starts
+
+
+
+$(document).ready(function(){    
+    let startButton =  $('#start').on('click',function() {
+    $("#start").hide();
         
+    function generateHTML() {
+        gameHTML =  $('#questionbox').append(`<div>${questionsArray[1].question}</div>`)
+        
+        // "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p>
+        // <p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
+        // $(".mainArea").html(gameHTML);
+        // }
+
     }
+});
 
-    person = { name: "Bob", gender: "?"}
 
-   var personsName = person.name
 
-// Questions for Travis - what is code like - "json object"
-questions = [
-    {
-        numbers: [1,2,3],
-        class : 'something',
-        value : 'random',
 
-        Question: [1,2,3],
-        rightanswer: 'something',
-        otheranswers : 'random',
-    },
-    {},
-    {},
-];
+// for (let i = 0; i <= questionsArray.length; i++) {
+//     let question = questionsArray[i].question
+//     let someting = questionsArray[i].answers
+//     $('#questionbox').append(`<div>${question}</div>`)
+
+// person = { name: "Bob", gender: "?"}
+
+//    var personsName = person.name
 
