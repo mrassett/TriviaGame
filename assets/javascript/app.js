@@ -8,45 +8,55 @@
 //.remove use to delete existing button, when delete button you inject the other elements that are needed
 //container, container, elements (for the second slide)
 //iterate over array, "for each questions " append an element to the DOM containing the questions and answers
-questionsArray = [{
-    question: "How are you?",
-    answers : ["fine","okay","good"],
-    rightAnswer: 1,
-},{   
-    question: "What's your favorite color?",
-    answers : ["blue","gray","green"],
-    rightAnswer: 2,
-},{
-    question: "What's your favorite animal?",
-    answers : ["goat","cow","llama"],
-    rightAnswer: 3,
-    
-},
-]
+var questionsArray =  [" ","How are you?", "Fav Color?"];
+
+let answerArray = [["fine", "well", "good","shitty"], 
+                    ["blue","black","gold","gray"]];
+
+let correctAnswers =["well","gold"];
+let timer; 
+let timeLeft = 20;
+let questionNumber = 0;
+let answered = "";
+let questionUserisOn = 0;
 //start button gets clicked, new page pops up with questions
 //write new div with 3 questions
 //timer starts
 //function to count timer down starts
 
 
-
+//Start button
 $(document).ready(function(){    
     let startButton =  $('#start').on('click',function() {
     $("#start").hide();
-        
-    function generateHTML() {
-        gameHTML =  $('#questionbox').append(`<div>${questionsArray[1].question}</div>`)
-        
-        // "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p>
-        // <p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
-        // $(".mainArea").html(gameHTML);
-        // }
+    showQuestions();
+    })
+})
 
+//New question & answer slide
+function showQuestions() {
+    $('#right-wrong').empty();
+    answered = true;
+    var triviaBox = $("#questionbox").html(`<h2>${questionsArray[+1]}<br></h2>
+    <button type="button" id="answer-button">${answerArray[questionUserisOn][0]}</button><br>
+    <button type="button" id="answer-button">${answerArray[questionUserisOn][1]}</button><br>
+    <button type="button" id="answer-button">${answerArray[questionUserisOn][2]}</button><br>
+    <button type="button" id="answer-button">${answerArray[questionUserisOn][3]}</button><br>`)
+    countDownBegins ();
+    };
+//timer function
+    function countDownBegins (){
+        timer = setInterval(function(){
+        $("#countdown").html(timeLeft);
+        if (timeLeft === 0){
+        clearInterval(timer);
+       } else{
+        timeLeft--;
+        }
+        }, 2000);
+        console.log(countDownBegins);
     }
-});
-
-
-
+        
 
 // for (let i = 0; i <= questionsArray.length; i++) {
 //     let question = questionsArray[i].question
@@ -55,5 +65,5 @@ $(document).ready(function(){
 
 // person = { name: "Bob", gender: "?"}
 
-//    var personsName = person.name
+//var personsName = person.name
 
