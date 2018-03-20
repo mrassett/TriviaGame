@@ -6,21 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli" rel="stylesheet">
+    <title>Trivia</title>
 </head>
-<body>
-    <h1></h1>
-    <button type="button" id="start"><h2>Start</h2></button>
-    <!-- Question Page -->
-    <h2></h2>
-    <div id="questionbox"></div>
-    <div id="countdown"></div>
-    <!-- Answer Page -->
-    <div id="right-wrong"></div>
-    <!-- Final Page -->
+<body background= "./assets/images/greathall.png">
+    <!-- Start Button -->
+    <button type="button" id="start"><h2>Trivia Quest</h2></button>
+    <!-- Quiz Form -->
+    <form id = "myform">
+    <div><div id="countdown">TIME</div></div>
 
+    <h4>Who was the band that played during Hogwarts' Yule Ball?</h4>
+    <input type="radio" class="rbclass" name="quizquestion" value="correct" id="quiz-answer1"><label for="quiz-answer1">The Weird Sisters</label>
+    <input type="radio" class="rbclass" name="quizquestion" value="incorrect" id="quiz-answer2"><label for="quiz-answer2">Greg and Forger</label><br>
+    <input type="radio" class="rbclass" name="quizquestion" value="incorrect" id="quiz-answer3"><label for="quiz-answer3">Switchblade Kittens</label>
+    <input type="radio" class="rbclass" name="quizquestion" value="incorrect" id="quiz-answer4"><label for="quiz-answer4">Celestina Warbeck and The Banshees</label>
+   
+    <h4>Who cuts off Myrcella's ear in Dorne?</h4>
+    <input type="radio" class="rbclass" name="quizquestion2" value="incorrect" id="quiz-answer5"><label for="quiz-answer5">The Mountain</label>
+    <input type="radio" class="rbclass" name="quizquestion2" value="correct" id="quiz-answer6"><label for="quiz-answer6">Gerold Dayne</label><br>
+    <input type="radio" class="rbclass" name="quizquestion2" value="incorrect" id="quiz-answer7"><label for="quiz-answer7">Melisandre</label>
+    <input type="radio" class="rbclass" name="quizquestion2" value="incorrect" id="quiz-answer8"><label for="quiz-answer8">Theon GreyJoy</label>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script type="text/javascript" src="./assets/javascript/app.js"></script>
+    <h4>In The Hunger Games - what is an Avox?</h4>
+    <input type="radio" class="rbclass" name="quizquestion3" value="correct" id="quiz-answer9"><label for="quiz-answer9">Mute Rebel</label>
+    <input type="radio" class="rbclass" name="quizquestion3" value="incorrect" id="quiz-answer10"><label for="quiz-answer10">Someone who volunteers as a tribute</label><br>
+    <input type="radio" class="rbclass" name="quizquestion3" value="incorrect" id="quiz-answer11"><label for="quiz-answer11">An official from The Capitol</label>
+    <input type="radio" class="rbclass" name="quizquestion3" value="incorrect" id="quiz-answer12"><label for="quiz-answer12">Resident of the underground District 13</label>
+  
+    <h4>Who are the 9 riders that never stop hunting for the Ring?</h4>
+    <input type="radio" class="rbclass" name="quizquestion4" value="incorrect" id="quiz-answer13"><label for="quiz-answer13">Black Riders</label>
+    <input type="radio" class="rbclass" name="quizquestion4" value="incorrect" id="quiz-answer14"><label for="quiz-answer14">Ringwraiths</label><br>
+    <input type="radio" class="rbclass" name="quizquestion4" value="incorrect" id="quiz-answer15"><label for="quiz-answer15">Nazgul</label>
+    <input type="radio" class="rbclass" name="quizquestion4" value="correct" id="quiz-answer16"><label for="quiz-answer16">All of the above</label>
+
+    <h4>In which of these movies does Thanos appear?</h4>
+    <input type="radio" class="rbclass" name="quizquestion5" value="incorrect" id="quiz-answer13"><label for="quiz-answer13">Return of the Jedi</label>
+    <input type="radio" class="rbclass" name="quizquestion5" value="incorrect" id="quiz-answer14"><label for="quiz-answer14">The Chronicles of Narnia: Prince Caspian</label><br>
+    <input type="radio" class="rbclass" name="quizquestion5" value="incorrect" id="quiz-answer15"><label for="quiz-answer15">Avatar</label>
+    <input type="radio" class="rbclass" name="quizquestion5" value="correct" id="quiz-answer16"><label for="quiz-answer16">Guardians of the Galaxy</label>
+    
+    <br><br>
+   
+
+    <input type="submit" button type="button" id="submit" onclick ="check();"></button>
+    </form>
+   <!-- Answer Page  -->
+   <div class="end" id ="answerpage">Correct
+   <div id="right"></div>
+  
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script> 
 </body>
 </html>

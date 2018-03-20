@@ -1,4 +1,68 @@
-body {
-    background: #a5e4e4;
-}
+
 #questiondiv {font-weight: bold; }
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+body {
+    background-image: url("./assets/images/greathall.png");
+      height: 100%; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+   
+#myform {
+    font-family: 'Muli', sans-serif;
+    padding-left: 45px;
+
+}
+#myform .rbclass {
+    padding: 100px;
+}
+form h4{
+    font-family: 'Muli', sans-serif;
+    font-family: 'Merriweather', serif;
+
+}
+#submit {
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: 15px 32px; 
+    text-align: center; 
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Muli', sans-serif;
+    font-family: 'Merriweather', serif;
+    background: dimgray;
+}
+.end {
+    font-family: 'Muli', sans-serif;
+    font-family: 'Merriweather', serif;
+    text-align: center; 
+    font-size: 30px;
+}
+#countdown{ 
+    font-weight: bold; 
+    text-align: center; 
+    font-size: 32px;
+    color: #22222c;
+
+}
+
+#start {
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    color: white;
+    padding: 15px 32px; 
+    margin-left: 350px;
+    font-size: 40px;
+    display: inline-block;
+    font-family: 'Muli', sans-serif;
+    font-family: 'Merriweather', serif;
+    background: dimgray;
+    }
+
