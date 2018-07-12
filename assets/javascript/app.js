@@ -5,7 +5,7 @@ let questionNumber = 0;
 let questionUserisOn = 0;
 let numberofCorrectAnswers = 0;
 
-$(document).ready(function(){
+let begin = $(document).ready(function(begin){
     $("#myform").hide();
     $("#right").hide();
     $("#wrong").hide();
@@ -62,5 +62,9 @@ function timeout(){
         $("#right").show();
         $("#right").html(numberofCorrectAnswers);
         $("#answerpage").show();
+        $("#end").show();
     }
 
+    // // let endButton =  $('#end').on('click',function gamesOver() {
+    // //  begin()
+    // });
